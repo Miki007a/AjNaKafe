@@ -1,0 +1,113 @@
+/* Chat.css */
+.chat-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
+}
+
+.chat-card {
+    background-color: white; /* White background for the card */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    width: 600px; /* Increased width */
+    max-height: 80vh; /* Prevent the card from exceeding the viewport height */
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    overflow: hidden; /* Prevent overflow */
+    padding: 10px;
+}
+.chat-header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #f0f0f0;
+    background-color: white;
+}
+
+.profile-picture {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.profile-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+.message-list {
+    flex-grow: 1; /* Allow the message list to grow */
+    overflow-y: auto; /* Scrollable when overflow */
+    padding: 10px; /* Add padding around messages */
+    height: 500px; /* Default height */
+}
+
+@media (min-width: 900px) {
+    .message-list {
+        height: 900px; /* Increase height on large screens */
+    }
+}
+
+@media (max-width: 900px) {
+    .chat-card {
+        width:100%;
+    }
+}
+
+
+
+
+
+.message-box {
+    border-radius: 20px;
+    padding: 10px 15px;
+    margin: 5px 0;
+    max-width: 70%;
+    word-wrap: break-word;
+}
+
+.message-box.right {
+    background-color: #dcf8c6; /* Light green for the sender (WhatsApp-like) */
+    align-self: flex-end; /* Align to the right */
+}
+
+.message-box.left {
+    background-color: #ffffff; /* White for the receiver */
+    align-self: flex-start; /* Align to the left */
+    border: 1px solid #f0f0f0; /* Light border */
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid #f0f0f0;
+}
+
+input {
+    flex-grow: 1;
+    margin: 0;
+    border-radius: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    outline: none;
+    font-size: 16px;
+}
+
+button {
+    margin-left: 10px; /* Space between input and button */
+    padding: 5px 15px;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.rce-container-input {
+    min-width: 80% !important;
+}
+.no-margin-top{
+    margin-top: 0 !important;
+}
